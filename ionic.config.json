@@ -1,0 +1,8 @@
+{
+  "name": "ekoot",
+  "app_id": "a6a06c31",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
