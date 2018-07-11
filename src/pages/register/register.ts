@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+// import { HomePage } from '../home/home';
+import { SelectCharacterPage } from '../select-character/select-character';
 /**
  * Generated class for the RegisterPage page.
  *
@@ -29,7 +30,7 @@ export class RegisterPage {
     if(this.username.length== 0 || this.password.length== 0 || this.repassword.length== 0){
       alert("Please fill all fields.");
     }else{
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push(SelectCharacterPage);
     }
   }
 

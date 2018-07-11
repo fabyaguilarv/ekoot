@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
+import { App, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the LoginPage page.
@@ -20,7 +21,7 @@ export class LoginPage {
   username:string;
   password:string;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public viewCtrl: ViewController, public appCtrl: App) {
   }
   
 
@@ -36,7 +37,8 @@ export class LoginPage {
     if(this.username.length == 0 || this.password.length == 0){
       alert("Please fill all fields.");
     }else{
-      this.navCtrl.push(HomePage);
+      this.navCtrl.setRoot(HomePage);
+
     }
     
   }
