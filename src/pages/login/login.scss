@@ -5,11 +5,8 @@ page-login {
     // background-repeat: no-repeat;
     // background-size: 100% 100%;
     // background-color: #45372E
-
-    ion-title {
-        margin-top: 7vh;
-        margin-bottom: 3vh;
-        
+    ion-content{
+        background-image:url('./../assets/imgs/bg.png');
     }
 
     #logo{
