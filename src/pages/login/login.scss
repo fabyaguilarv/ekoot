@@ -8,6 +8,11 @@ page-login {
     ion-content{
         background-image:url('./../assets/imgs/bg.png');
     }
+    ion-title {
+        margin-top: 7vh;
+        margin-bottom: 3vh;
+        
+    }
 
     #logo{
         width: 52%;

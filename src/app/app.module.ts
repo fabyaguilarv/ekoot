@@ -8,6 +8,7 @@ import { RegisterPage } from '../pages/register/register';
 import { SelectCharacterPage } from '../pages/select-character/select-character'; 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { RetosModalPage } from '../pages/retos-modal/retos-modal';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegisterPage,
     SelectCharacterPage,
     HomePage,
-    ListPage
+    ListPage,
+    RetosModalPage
     
   ],
   imports: [
@@ -34,7 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegisterPage,
     SelectCharacterPage,
     HomePage,
-    ListPage
+    ListPage,
+    RetosModalPage
     
   ],
   providers: [
