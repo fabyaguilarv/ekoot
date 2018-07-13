@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-
+import { ShareAppPage } from '../share-app/share-app';
+import { ModalController } from 'ionic-angular';
 /**
  * Generated class for the RetosModalPage page.
  *
@@ -15,7 +16,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class RetosModalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private view: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private view: ViewController, private modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -24,5 +25,10 @@ export class RetosModalPage {
 
   closeModal(){
     this.view.dismiss();
+  }
+
+  presentModal() {
+    const modal = this.modalCtrl.create(ShareAppPage);
+    modal.present();
   }
 }

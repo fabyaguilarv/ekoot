@@ -9,7 +9,8 @@ import { SelectCharacterPage } from '../pages/select-character/select-character'
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { RetosModalPage } from '../pages/retos-modal/retos-modal';
-
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { ShareAppPage } from '../pages/share-app/share-app';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SelectCharacterPage,
     HomePage,
     ListPage,
-    RetosModalPage
+    RetosModalPage,
+    ShareAppPage
     
   ],
   imports: [
@@ -37,12 +39,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SelectCharacterPage,
     HomePage,
     ListPage,
-    RetosModalPage
+    RetosModalPage,
+    ShareAppPage
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

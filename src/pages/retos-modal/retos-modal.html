@@ -10,7 +10,7 @@
     <ion-title>Reto</ion-title>
     <ion-buttons end>
         <button ion-button (click)="closeModal()">Close</button>
-      </ion-buttons>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -26,7 +26,7 @@
             Comparte la aplicación con 3 amigos para completar este reto.
           </p>
 
-          <button id="cumplir-button" ion-button full>¡CUMPLIR!</button>
+          <button id="cumplir-button" (click)="presentModal()" ion-button full>¡CUMPLIR!</button>
         </ion-card-content>
       </ion-card>
   
