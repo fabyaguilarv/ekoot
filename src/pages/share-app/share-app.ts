@@ -16,8 +16,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 })
 export class ShareAppPage {
 
-  message:string = "¡Hola!, te invito a desargar la aplicación de ekoot.";
-  link:string="www.ekoot.mx";
+  message:string = "¡Hola!, te invito a desargar la aplicación de ekoot. \nwww.ekoot.mx";
+  link:string="";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, private view: ViewController) {
   }
