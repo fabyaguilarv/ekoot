@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>share-app</ion-title>
+    <ion-title>Share</ion-title>
     <ion-buttons end>
         <button ion-button (click)="closeModal()">Close</button>
     </ion-buttons>
@@ -19,11 +19,11 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
+      <ion-input [(ngModel)]="message" placeholder="Enter message"></ion-input>
+    </ion-item>  
+    <ion-item>
       <ion-input [(ngModel)]="link" placeholder="Enter link"></ion-input>
     </ion-item>
-    <ion-item>
-        <ion-input [(ngModel)]="message" placeholder="Enter message"></ion-input>
-      </ion-item>  
   </ion-list>
   <button ion-button full (click)="share()">SHARE</button>
 </ion-content>
