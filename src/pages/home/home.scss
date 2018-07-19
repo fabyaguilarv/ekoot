@@ -4,12 +4,42 @@ page-home {
         background-image:url('./../assets/imgs/bg-home.jpg');
     }
 
-    #impactos{
+    .impactos{
         height: 10%;
+        
+    }
+    .centered {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .left{
+        position: absolute;
+        top: 55%;
+        left: 16%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .right{
+        position: absolute;
+        top: 55%;
+        left: 83%;
+        transform: translate(-50%, -50%);
     }
 
     #impactos-row{
         margin-top: 6%;
+        position: relative;
+    }
+    .puntos{
+        background-color: #666666;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+	    font-size: 60px;
     }
     
     #globe{
