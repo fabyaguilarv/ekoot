@@ -11,6 +11,7 @@ import { ListPage } from '../pages/list/list';
 import { RetosModalPage } from '../pages/retos-modal/retos-modal';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { ShareAppPage } from '../pages/share-app/share-app';
+import { DirectorioPage } from '../pages/directorio/directorio';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     RetosModalPage,
-    ShareAppPage
+    ShareAppPage,
+    DirectorioPage
     
   ],
   imports: [
@@ -40,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     RetosModalPage,
-    ShareAppPage
+    ShareAppPage,
+    DirectorioPage
     
   ],
   providers: [
