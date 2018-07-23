@@ -12,9 +12,12 @@ import { RetosModalPage } from '../pages/retos-modal/retos-modal';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { ShareAppPage } from '../pages/share-app/share-app';
 import { DirectorioPage } from '../pages/directorio/directorio';
-
+//import { Firebase } from '@ionic-native/firebase';
+import { AngularFireModule } from 'angularfire2';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FIREBASE_CONFIG } from './app.firebase.config';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 @NgModule({
   declarations: [
@@ -28,10 +31,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ShareAppPage,
     DirectorioPage
     
+    
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,6 +50,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RetosModalPage,
     ShareAppPage,
     DirectorioPage
+  
     
   ],
   providers: [

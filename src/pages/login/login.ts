@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
+import { User } from '../../models/user';
 import { App, ViewController } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth'
 
 /**
  * Generated class for the LoginPage page.
@@ -21,7 +23,9 @@ export class LoginPage {
   username:string;
   password:string;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams,  public viewCtrl: ViewController, public appCtrl: App) {
+  user = {} as User;
+
+  constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams,  public viewCtrl: ViewController, public appCtrl: App) {
   }
   
 
@@ -29,16 +33,26 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   
-  login(){
-    console.log("Username: "+ this.username);
+  async login(user: User){
+   /* console.log("Username: "+ this.username);
 
     console.log("Password: "+ this.password);
     
-    if(this.username.length == 0 || this.password.length == 0){
+   if(this.username.length == 0 || this.password.length == 0){
       alert("Please fill all fields.");
     }else{
       this.navCtrl.setRoot(HomePage);
 
+    }*/
+
+    try{
+      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+      console.log(result);
+      if(result){
+        this.navCtrl.setRoot(HomePage);
+      }
+    } catch(e){
+      console.error(e);
     }
     
   }
