@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'directorio.html',
 })
 export class DirectorioPage {
-
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

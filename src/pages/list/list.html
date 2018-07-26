@@ -10,37 +10,12 @@
 <ion-content >
 
     <ion-content class="card-background-page">
-
-        <ion-card (click)="goNext()">
-          <img id="img-dir" src="assets/imgs/saigon.jpg"/>
-          <!--<div class="card-title">Saigon</div>
-          <div class="card-subtitle">Info</div> -->
+      <ion-list ion-item *ngFor="let item of items"> 
+        <ion-card  (click)="goNext()">    
+          <img id="img-dir" src= {{item.img}} >
         </ion-card>
       
-        <ion-card (click)="goNext()">
-          <img id="img-dir" src="assets/imgs/butcher.jpg"/>
-          <!--<div class="card-title">Saigon</div>
-          <div class="card-subtitle">Info</div>-->
-        </ion-card>
-      
-        <ion-card (click)="goNext()">
-          <img id="img-dir" src="assets/imgs/saigon.jpg"/>
-          <!--<div class="card-title">Saigon</div>
-          <div class="card-subtitle">Info</div>-->
-        </ion-card>
-      
-        <ion-card (click)="goNext()">
-          <img id="img-dir" src="assets/imgs/saigon.jpg"/>
-          <!--<div class="card-title">Saigon</div>
-          <div class="card-subtitle">Info</div>-->
-        </ion-card>
-
-        <ion-card (click)="goNext()">
-            <img id="img-dir" src="assets/imgs/saigon.jpg"/>
-            <!--<div class="card-title">Saigon</div>
-            <div class="card-subtitle">Info</div>-->
-          </ion-card>
-      
+        </ion-list>
       </ion-content>
   
   <div *ngIf="selectedItem" padding>
