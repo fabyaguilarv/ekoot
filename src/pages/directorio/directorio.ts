@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { ListsService } from '../../services/lists.service';
 /**
  * Generated class for the DirectorioPage page.
  *
@@ -15,7 +16,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DirectorioPage {
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  directorio = {id:null,img:null,name:null,web:null, description:null};
+  id=null;
+  
+
+  
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public listsService: ListsService ) {
+   this.id = navParams.get('id');
+   if(this.id != 0){
+     listsService.getList(this.id)
+     .subscribe(directorio => {
+      this.directorio = directorio;
+     });
+   }
+
+  
+  
   }
 
   ionViewDidLoad() {

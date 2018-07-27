@@ -18,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ListsService } from '../services/lists.service';
+import { DirectoriosService } from '../services/directorios.service';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
@@ -61,7 +62,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     SplashScreen,
     SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ListsService
+    ListsService,
+    DirectoriosService
   ]
 })
 export class AppModule {}

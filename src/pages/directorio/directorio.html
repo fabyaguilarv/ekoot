@@ -15,15 +15,18 @@
 
 <ion-content padding>
   <ion-grid>
-    <ion-row>
-      <img class="header-img" col-12 src="assets/imgs/saigon.jpg">
+    <ion-row *ngFor="let directorio of items">
+      <img class="header-img" col-12 src="{{directorio.img}}">
+    </ion-row>
+    <ion-row *ngFor="let directorio of items">
+      <p class="brand-name" >{{directorio.name}}</p>
     </ion-row>
     <ion-row>
-      <p class="brand-name">Name</p>
-    </ion-row>
-    <ion-row>
-      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatem quis maiores, 
+      <p class="description" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatem quis maiores, 
         obcaecati ipsa temporibus eum ducimus architecto reprehenderit quisquam enim aliquam ad omnis</p>
+    </ion-row>
+    <ion-row col-12>
+      <p><b>Sitio Web: </b> <a href="https://www.google.com/">www.google.com</a></p>
     </ion-row>
     <ion-row>
         <p class="brand-name">Acciones Sustentables</p>
