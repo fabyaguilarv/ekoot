@@ -10,8 +10,8 @@
 <ion-content >
 
     <ion-content class="card-background-page">
-      <ion-list ion-item *ngFor="let item of items"> 
-        <ion-card  (click)="goNext()">    
+      <ion-list class="list" ion-item *ngFor="let item of items; let i = index"> 
+        <ion-card  (click)="test(i)">    
           <img id="img-dir" src= "{{item.img}}" >
         </ion-card>
       

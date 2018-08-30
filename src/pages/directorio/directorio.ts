@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 import { ListsService } from '../../services/lists.service';
+
+import { AngularFireDatabase } from 'angularfire2/database';
+
+//import { ListPage } from '../list/list';
 /**
  * Generated class for the DirectorioPage page.
  *
@@ -16,22 +21,49 @@ import { ListsService } from '../../services/lists.service';
 })
 export class DirectorioPage {
   
-  directorio = {id:null,img:null,name:null,web:null, description:null};
-  id=null;
-  
+  arrData = []
 
+  value: any;
   
+  nombre:any;
+  imagen:any;
+  descripcion:any;
+  paginaWeb:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public listsService: ListsService ) {
-   this.id = navParams.get('id');
-   if(this.id != 0){
-     listsService.getList(this.id)
-     .subscribe(directorio => {
-      this.directorio = directorio;
-     });
-   }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fdb: AngularFireDatabase,public listsService: ListsService) {
 
+    // listsService.getLists()
+    // .subscribe(lists => {
+    //   this.arrData = lists;
+
+    //   console.log(this.arrData);
+      
+    //   for (var i = 0; i <= this.arrData.length; i++){
+    //     console.log(this.arrData[i].name);
+    // }
+
+
+    // });
   
+    // console.log("HOLA");
+    // console.log(this.navParams.data);
+
+    this.value = navParams.get('pageIndex');
+    
+  this.fdb.list("/lists/").valueChanges().subscribe(_data => {
+    this.arrData = _data;
+
+     this.nombre = this.arrData[this.value].name;    
+     this.imagen = this.arrData[this.value].img;
+     this.descripcion = this.arrData[this.value].description;
+     this.paginaWeb = this.arrData[this.value].web;
+
+
+    
+
+  });
+
+
   
   }
 

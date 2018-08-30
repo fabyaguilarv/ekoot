@@ -13,21 +13,28 @@ export class ListPage {
 
 
  items = [];
+ 
   @ViewChild('myNav') nav: NavController;
   constructor(public navCtrl: NavController, public navParams: NavParams, public listsService: ListsService) {
     listsService.getLists()
     .subscribe(lists => {
       this.items = lists;
-    });
-    
-    
 
-    
+      console.log(this.items);
+      console.log(this.items.length);
+
+      
+
+    });
+
+  
   }
 
+  test(i: number){
 
-  goNext(){
-    this.navCtrl.push(DirectorioPage);
+    this.navCtrl.push(DirectorioPage,{'pageIndex' : i});
+  }
+ 
   }
   
-}
+
