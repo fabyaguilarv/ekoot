@@ -34,16 +34,6 @@ export class LoginPage {
   }
   
   async login(user: User){
-   /* console.log("Username: "+ this.username);
-
-    console.log("Password: "+ this.password);
-    
-   if(this.username.length == 0 || this.password.length == 0){
-      alert("Please fill all fields.");
-    }else{
-      this.navCtrl.setRoot(HomePage);
-
-    }*/
 
     try{
       const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);

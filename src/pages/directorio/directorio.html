@@ -30,14 +30,18 @@
     <ion-row>
         <p class="brand-name">Acciones Sustentables</p>
     </ion-row>
-    <div class="actions">
-        <ion-row>
-            <p class="action-title"><b>Acción</b></p><br>
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, veritatis consequatur! Provident temporibus officia</p>
-        </ion-row>
-        <ion-row>
-            <img class="action-img" col-12 src="assets/imgs/ss.jpg">
-        </ion-row>
+    <div class="actions" >
+        <ion-card *ngFor="let element of secondArr">
+          <img src="{{element.imgA}}"/>
+          <ion-card-content>
+          <ion-card-title >
+              {{element.titleA}}
+          </ion-card-title>
+          <p>
+            {{element.descriptionA}}
+          </p>
+          </ion-card-content>
+</ion-card>
   </div>
   </ion-grid>
 </ion-content>
