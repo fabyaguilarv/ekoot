@@ -1,14 +1,24 @@
-<ion-content padding center text-center>
+<ion-content padding center text-center class="bg-login">
   <ion-title><img id="logo" src="assets/imgs/logo-ekoot-vertical.png"></ion-title>
   <ion-list>
-    <ion-item>
-      <ion-input placeholder="Email" type="text" [(ngModel)]="user.email"></ion-input>
+    <ion-item class="login-input">
+      <ion-label stacked style="color:white;font-size: 15px;">Nombre de Usuario:</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email" style="color:white;"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-input placeholder="Password" type="password" [(ngModel)]="user.password"></ion-input>
+    <ion-item class="login-input">
+      <ion-label stacked style="color:white;font-size: 15px;">Contraseña:</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password" style="color:white;"></ion-input>
     </ion-item>
   </ion-list>
 
-  <button ion-button full color="secondary"  (click)="login(user)">Log in</button>
-  <button ion-button full color="light"  (click)="goRegister()">Register</button>
+  <ion-row>
+  <ion-col col-offset></ion-col>
+    <ion-col col-10 col-offset style="text-align: right;font-size: 12px;"><a href="#" style="color:white;">¿Olvidaste tu contraseña?</a></ion-col>
+  </ion-row>
+  <button ion-button full color="light" style="height: 8%;color:#71c7eb;"  (click)="login(user)"  round>Log in</button>
+  <ion-row>
+  <ion-col col-offset></ion-col>
+    <ion-col col-10 col-offset style="text-align: right; color:white;font-size: 12px;">¿Todavía no tienes cuenta?</ion-col>
+  </ion-row>
+  <button ion-button full  style="background-color:#b4e450;height: 8%;color:#447aad;" (click)="goRegister()" round>Sign Up</button>
 </ion-content>
