@@ -5,7 +5,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ListsService } from '../../services/lists.service';
 
 import { AngularFireDatabase } from 'angularfire2/database';
-import { appendNgContent } from '@angular/core/src/view/ng_content';
+
 
 //import { ListPage } from '../list/list';
 /**
@@ -57,27 +57,10 @@ export class DirectorioPage {
   });
   
   this.actionsV = this.value + 1;
-  console.log(this.actionsV);
 
   this.fdb.list("/lists/"+this.actionsV+"/actions").valueChanges().subscribe(_data => {
     this.secondArr = _data;
     
-    
-
-  //  for(var i=0;i<this.secondArr.length;i++){
-      
-  //     this.tituloA.push(this.secondArr[i].titleA);  
-  //     this.descripcionAccion.push(this.secondArr[i].descriptionA);
-
-
-      
-
-  //  }
-  //   console.log(this.secondArr);
-    
-   
-
- 
 
   });
   
