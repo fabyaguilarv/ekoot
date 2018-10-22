@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import { HomePage } from '../home/home';
-//import { SelectCharacterPage } from '../select-character/select-character';
+import { SelectCharacterPage } from '../select-character/select-character';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -39,6 +39,10 @@ export class RegisterPage {
     }else{
       this.navCtrl.push(SelectCharacterPage);
     }*/
+  }
+
+  goNext(){
+    this.navCtrl.push(SelectCharacterPage);
   }
 
 }

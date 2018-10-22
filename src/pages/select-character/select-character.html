@@ -13,8 +13,8 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list>
+<ion-content padding class="bg-login">
+  <!--> <ion-list>
     <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/imgs/avatar.png">
@@ -39,6 +39,78 @@
       <p>blablaba</p>
       <button ion-button round item-end (click)="goHome()">Select</button>
     </ion-item>
-  </ion-list>
+  </ion-list>-->
+
+  <ion-grid>
+
+    <!--Selected character-->
+    <ion-row>
+      <ion-col col-12 style="text-align:center;">
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+    </ion-row>
+    <br>
+
+    <!--Select-->
+    <ion-row>
+    <ion-col col-12>
+      <ion-list>
+        <ion-item>
+          <ion-label>Personajes</ion-label>
+          <ion-select interface="popover" [(ngModel)]="gaming">
+            <ion-option value="nes">Todos</ion-option>
+            <ion-option value="n64">Respeto a la Naturaleza</ion-option>
+            <ion-option value="ps">Bienestar Personal</ion-option>
+            <ion-option value="genesis">Desarrollo Social</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <!--Characters-->
+    <ion-row>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+      <ion-col col-4>
+         <img class="character-img" src="assets/imgs/avatar.png">
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col col-12>
+         <button  ion-button full round (click)="goHome()" style="background-color:#b4e450;color:#447aad;">Ir</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
