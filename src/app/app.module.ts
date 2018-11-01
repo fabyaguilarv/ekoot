@@ -12,6 +12,7 @@ import { RetosModalPage } from '../pages/retos-modal/retos-modal';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { ShareAppPage } from '../pages/share-app/share-app';
 import { DirectorioPage } from '../pages/directorio/directorio';
+import { ChararacterInfoPage } from '../pages/chararacter-info/chararacter-info';
 import { AngularFireModule } from 'angularfire2';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,7 +33,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ListPage,
     RetosModalPage,
     ShareAppPage,
-    DirectorioPage
+    DirectorioPage,
+    ChararacterInfoPage
     
     
   ],
@@ -53,7 +55,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ListPage,
     RetosModalPage,
     ShareAppPage,
-    DirectorioPage
+    DirectorioPage,
+    ChararacterInfoPage
   
     
   ],

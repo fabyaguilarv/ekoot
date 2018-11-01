@@ -7,6 +7,7 @@ import { LoginPage } from '../pages/login/login';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { RetosModalPage } from '../pages/retos-modal/retos-modal';
 
 
 @Component({
@@ -26,7 +27,8 @@ export class MyApp {
     this.pages = [
 
       { title: 'Home', component: HomePage },
-      { title: 'Directorio', component: ListPage }
+      { title: 'Directorio', component: ListPage },
+      { title: 'Retos', component: RetosModalPage }
       
     ];
 

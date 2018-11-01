@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
-
+//import { HomePage } from '../home/home';
+import { ChararacterInfoPage } from '../chararacter-info/chararacter-info';
 /**
  * Generated class for the SelectCharacterPage page.
  *
@@ -16,6 +16,8 @@ import { HomePage } from '../home/home';
 })
 export class SelectCharacterPage {
 
+  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,8 +25,11 @@ export class SelectCharacterPage {
     console.log('ionViewDidLoad SelectCharacterPage');
   }
 
-  goHome(){
-    this.navCtrl.setRoot(HomePage);
+  goNext(){
+    this.navCtrl.push(ChararacterInfoPage);
   }
+ /* goHome(){
+    this.navCtrl.setRoot(HomePage);
+  }*/
 
 }
