@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { ShareAppPage } from '../share-app/share-app';
 import { ModalController } from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
 /**
  * Generated class for the RetosModalPage page.
  *
@@ -16,11 +17,23 @@ import { ModalController } from 'ionic-angular';
 })
 export class RetosModalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private view: ViewController, private modalCtrl: ModalController) {
+  message:string = "¡Hola!, te invito a desargar la aplicación de ekoot. \nwww.ekoot.mx";
+  link:string="";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private view: ViewController, private modalCtrl: ModalController, private socialSharing: SocialSharing) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RetosModalPage');
+  }
+
+  share(){
+    this.socialSharing.share(this.message, this.link)
+    .then(()=>{
+
+    }).catch(() =>{
+
+    });
   }
 
   closeModal(){
